@@ -5,14 +5,14 @@ Leetcode Practice
  'Remove' duplicated ints from a sorted array by moving the singular values (sorted) to the front of of array and duplicates to back.
 
  Swap Sorting Algorithm:
-    //Assumptions: The array given is sorted, the latter portion order doesn't matter
-    int length = 1; //array will always be at least 1 long
+    // Assumptions: The array given is sorted, the latter portion order doesn't matter
+    int length = 1; // array will always be at least 1 long
     for(int i=1; i < array.size; i++){
       if(array[i] == array[i-1]){
         rotate i to back of array
         i-- //because the array after i moves forward, check i again
       }
-      else if(array[i] < array[i+1]){ //for every time there i!=i-1, and i is not the last element in singular sorted subarray
+      else if(array[i] < array[i+1]){ // for every time there i!=i-1, and i is not the last element in singular sorted subarray
         length++
       }
       else{
@@ -21,11 +21,11 @@ Leetcode Practice
     }
 
  Deletion Algorithm:
-  int length = 1;
-  for(int i = 1; array.size != length; i++){
+  int length = 1; // length of final array
+  for(int i = 1; array.size != length; i++){ // array size will decrease, length will increase
     if(array[i] == array[i-1]){
       remove array[i]
-      i-- //because the array after i moves forward, check i again
+      i-- // because the array after i moves forward, check i again
     }
     else{
       length++;
