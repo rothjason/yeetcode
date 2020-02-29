@@ -8,8 +8,6 @@ int removeDuplicates(vector<int> &v);
 int main(){
   vector <int> nums;
   nums.push_back(1);
-  nums.push_back(1);
-  nums.push_back(1);
   nums.push_back(2);
   nums.push_back(3);
   nums.push_back(3);
@@ -23,7 +21,13 @@ int main(){
   nums.push_back(6);
 
 
+  int test = removeDuplicates(nums); //should return 6
 
+  cout << "Final Array Size: " << test << endl;
+
+  for(int i = 0; i < nums.size(); i++){
+    cout << nums[i] << " ";
+  }
 
 }
 
