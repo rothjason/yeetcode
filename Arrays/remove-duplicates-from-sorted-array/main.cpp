@@ -8,9 +8,9 @@ int removeDuplicates(vector<int> &v);
 int main(){
   vector <int> nums;
 
-  nums.push_back(0);
-  nums.push_back(0);
-  nums.push_back(0);
+  nums.push_back(1);
+  nums.push_back(1);
+  nums.push_back(1);
   nums.push_back(1);
   nums.push_back(2);
   nums.push_back(3);
@@ -36,15 +36,12 @@ int main(){
 }
 
 int removeDuplicates(vector<int> &v){
-  int length = 1;
-  for(int i = 1; v.size()!=length; i++){
-    if(v[i] == v[i-1]){
-      v.erase(v.begin()+i);
-      i--;
-    }
-    else{
-      length++;
+  int j = 0;//slow runner
+  for(int i = 1; i < v.size(); i++){ //i is fast runner
+    if(v[j] != v[i]){
+      j++;
+      v[j]=v[i];
     }
   }
-  return length;
+  return j+1;
 }
