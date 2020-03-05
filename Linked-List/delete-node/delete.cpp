@@ -26,16 +26,20 @@ int main(){
     ptr->next = new ListNode(i);
     ptr = ptr->next;
   }
+  ptr = &test;
+  ptr = ptr->next;
+  deleteNode(ptr);
 
-  test.next = new ListNode(2);
-
-  cout << test.val << " " << test.next->val;
-
-
+ ListNode *nptr = &test;
+  while (nptr != NULL){
+    cout << nptr->val;
+    nptr = nptr->next;
+  }
+  cout << endl;
 }
 
-
 void deleteNode(ListNode *node){
-
-
+  cout << "Delete Node: " << node->val << endl;
+  node->val = node->next->val;
+  node->next = node->next->next;
 }
