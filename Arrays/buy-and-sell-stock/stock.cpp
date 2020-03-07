@@ -7,6 +7,17 @@ Givens:
 -May buy/sell on as many days as possible
 
 Algorithm Prototype:
+int buy = 0;
+int sell = 0;
+int i = 0;
+  while(v.size > 1){
+    if(v[i] < v[i+1] && buy == 0){
+
+    }
+
+    v.pop_front(); //pass by the day
+  }
+
 
 */
 
@@ -24,5 +35,9 @@ int main(){
 }
 
 int maxProfit(vector <int> prices){
+
+  for(int i = 0; i < prices.size(); i++){
+
+  }
 
 }
