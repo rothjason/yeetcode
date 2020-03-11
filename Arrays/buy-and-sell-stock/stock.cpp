@@ -15,6 +15,8 @@ for(int i = 0; i < v.size(); i++){
   }
 }
 return profit
+}
+
 
 */
 
@@ -52,5 +54,5 @@ int maxProfit(vector <int> prices){
       profit += prices[i]-prices[i-1];
     }
   }
-  return profit;
+  return profit;\
 }
